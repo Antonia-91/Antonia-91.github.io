@@ -1,0 +1,110 @@
+/* min .menu-btn är en div som ska fungera som en wrapper, och ska användas som en klickevent , innuti menu-btn ska vi ha våra "bars".  i min html har jag bara en bar. så jag skapar fler med hjälp av ett psudoelment ::berofe */
+
+.menu-btn {
+    position:absolute;
+    z-index: 1;
+    right: 1rem;
+    top: 1rem;
+    height: 20px;
+    width: 28px;
+    cursor: pointer;
+    @include trasition-ease;
+
+    &__burger {
+        position: absolute;
+        right: 0;
+        top: 0.5rem;
+        width: 28px;
+        height: 3px;
+        background-color: set-text-color($primary-color);
+        @include trasition-ease;
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: -8px; /* så den hoppar upp 8px från sin startposition.*/
+            width: 28px;
+            height: 3px;
+            background: set-text-color($primary-color);
+            @include trasition-ease;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 8px; /* så den hoppar upp 8px från sin startposition.*/
+            width: 28px;
+            height: 3px;
+            background: set-text-color($primary-color);
+            @include trasition-ease;
+        }
+
+        &.open{
+            transform: rotate(720deg);
+            background: transparent; 
+
+
+        }
+    } 
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    opacity: 0.98;
+    visibility: hidden;
+
+    &.open {
+        visibility: visible;
+    }
+
+        .menu-nav{
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            background: $primary-color;
+            list-style-type: none;
+            padding-right: 1rem;
+            transform: translateY(-100%); /* -100% av Y axeln, alltså  "förvinner" från bild, men att den på .open translate till Y 0, vilket är dess ursprungsläge*/ 
+            @include trasition-ease;
+
+            &.open {
+                transform: translateY(0);
+                }
+
+                &__item{
+                    transform: translateX(100vw); /* 100% från sitt utsprungsläge i x axeln )*/
+                    @include trasition-ease;
+
+            &.open { /* när den är öppen, ska den ha position 0 på sin X axel, alltså dess ursprungsläge*/
+                transform: translateX(0);
+            }
+
+            &.active > a { /* när min länkar är activa ska som även ha en annan färg */
+                color: $secondary-color;
+            }
+        }
+
+        &__link {
+            display: inline-block;
+            font-size: 2rem;
+            text-transform: uppercase;
+            padding: 2rem 0;
+            font-weight: 300;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+  }
+
+
+/* att använda rem i innebär att måttet är relativt till något. rem är i förhållande till root elementent. sätter jag exemplavis 2rem, så kommer man ta root vädet x2 , exemplevis 1rem= 16px, då blir 2rem 32px.
+
+Men änvänder jag px istället så kommer det ALLTID vara i den storlak jag sätter, efterom px är ett absolut värde... */

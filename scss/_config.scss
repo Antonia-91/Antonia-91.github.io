@@ -1,0 +1,45 @@
+$primary-color: rgba(14, 13, 13, 0.879);
+$secondary-color: orange; 
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*  @mixin , använd  tillsammans med en @include .. */
+@mixin trasition-ease {  
+    transition: all 0.5s ease-in-out;
+}
+
+
+/* om jag ändrar min primary color till vit, så kommer man inte kunna se texten, ( som jag sagt ska vara vit) då kan jag använda en @funktion som ska ge våran text en passande färg..! använd set-text-colo. 
+@if  om (lightsen är större än > 40 % ) 
+@return så vill vi ha en return color av svart exempelvis.. 
+@else om den är en mörk färg, @return to white..
+obs! viktigt med mellanslagen, inga mellanslag innan mina ()*/
+
+@function set-text-color($color) {
+    @if (lightness($color) > 40%){
+        @return black;
+    } @else {
+        @return white;
+    }
+}
+
+@mixin media-md {
+    @media screen and (min-width: 700px){
+        @content; 
+    }    
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 1024px){
+        @content; 
+    }    
+}
+
+@mixin media-xl {
+    @media screen and (min-width: 1600px){
+        @content; 
+    }    
+}

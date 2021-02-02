@@ -1,0 +1,32 @@
+.home {
+    height: 100%;
+    padding-top: 40vh; /* 40 % av tillgänglig vievport höjd*/
+    overflow: hidden;/* vill inte ha något "scrolbar"*/ 
+    align-items: center;
+    text-align:center;
+    background:
+    linear-gradient(
+        to right,
+        rgba($primary-color, 0.9),
+        rgba($primary-color, 0.3),
+    ),
+    url("../img/antonia-sitting.jpg") center top;
+    background-size: cover;
+
+     /* & är för att nesta mina emelent/classer iställer för att skriva på ny rad " .home __name " eller " .home __name --last "*/
+
+    #cursive {
+        font-family: 'Yellowtail', cursive;}
+
+    &__name { 
+        font-size: 2rem;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid set-text-color($primary-color);
+
+        &--last {
+            color: $secondary-color;
+            font-weight: 700; 
+        }
+    }
+}

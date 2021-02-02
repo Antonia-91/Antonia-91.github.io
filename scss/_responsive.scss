@@ -1,0 +1,74 @@
+@include media-md{
+    .menu-btn {
+        visibility: hidden;
+    }
+
+    .nav{
+        visibility: visible;
+
+        .menu-nav{
+           display:block;
+           transform: translateY(0);
+           height: 100%;
+           background: transparent;
+           text-align: right;
+           
+           &__item {
+               display: inline;
+               padding-right: 1.5rem;
+           }
+
+           &__link{
+             font-size: 1.5rem;  
+           }
+        }
+    }
+
+    .about__bio{
+        font-size: 1.5rem;
+    }
+
+    .projects{
+       &__bio-items{
+           height: 40vh;
+       } 
+       &__items {
+          grid-template-columns: repeat(2, 1fr) ; 
+       }
+       .text-secondary{
+          font-size: 3rem;
+       }
+    }
+
+    .contact__list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+   
+
+@include media-lg {
+    .projects {
+        &__items {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    .contact__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@include media-xl {
+    .projects__bio-image {
+        height: 50vh;
+    }
+}
+/*-------------------------------------------*\
+               Grid motivering: 
+
+exempelvis på .projects så är en &__items en div med display Grid då varje &__item (child till &__items tar upp 1fr var. med ett gridgap på 2rem. valde rem och inte px för att göra det respinsivt i förhållande till storlken på skärmen. 
+
+.projects i mina @media så ändrar jag __items till 2st 1fr samt 3st 1fr. 
+
+\*-------------------------------------------*/
