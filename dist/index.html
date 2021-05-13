@@ -1,73 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Antonias Portfolio</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="HTML CSS SASS task in creating a responsive web with my Portfolio / CV">
-        <meta name="keywords" content="Responsive Web HTML, CSS, JavaScript, Portfolio">
-        <meta name="author" content=" Antonia Pettersson">
+  <head>
+    <title>Antonias Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="HTML CSS SASS task in creating a responsive web with my Portfolio / CV"
+    />
+    <meta
+      name="keywords"
+      content="Responsive Web HTML, CSS, JavaScript, Portfolio"
+    />
+    <meta name="author" content=" Antonia Pettersson" />
 
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
-       
-        <link href="css/main.css" rel="stylesheet">
-    </head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
     <!--- Min header följer med på varje html sida -->
-        <header>
-            <div class="menu-btn" id="menu-btn">
-                <span class="menu-btn__burger" id="menu-btn__burger"></span>
-            </div>
-            <nav class="nav" id="nav">
-                <ul class="menu-nav" id="menu-nav">
-                    <li class="menu-nav__item active" >
-                        <a href="index.html" class="menu-nav__link">HOME </a>
-                    </li>
-                    <li class="menu-nav__item" >
-                        <a href="about.html" class="menu-nav__link">About me</a>
-                    </li>
-                    <li class="menu-nav__item" >
-                        <a href="projects.html" class="menu-nav__link">My Projects</a>
-                    </li>
-                    <li class="menu-nav__item" >
-                        <a href="contact.html" class="menu-nav__link">Contact me</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+    <header>
+      <div class="menu-btn" id="menu-btn">
+        <span class="menu-btn__burger" id="menu-btn__burger"></span>
+      </div>
+      <nav class="nav" id="nav">
+        <ul class="menu-nav" id="menu-nav">
+          <li class="menu-nav__item">
+            <a href="index.html" class="menu-nav__link">HOME</a>
+          </li>
+          <li class="menu-nav__item active">
+            <a href="about.html" class="menu-nav__link">ABOUT ME</a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="projects.html" class="menu-nav__link">MY PROJECTS</a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="contact.html" class="menu-nav__link">CONTACT ME</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-<!--- min main saction är den som ändras för respective sida, och har en engen scss fil -->
-        <main>
-            <section class="home">
-                <h2>Hello! My name is</h2>
-                <h1 class="home__name">Antonia <span class="home__name--last"> Pettersson</span></h1>
-                <h2 id="cursive">
-                    Web Developer Student 
-                </h2>
-                <div class="social-icons">
-                    <a href="#!">
-                        <i class="fab fa-twitter fa-2x"> </i>
-                    </a>
-                    <a href="#!">
-                        <i class="fab fa-instagram fa-2x"> </i>
-                    </a>
-                    <a href="#!">
-                        <i class="fab fa-facebook fa-2x"> </i>
-                    </a>
-                    <a href="#!">
-                        <i class="fab fa-github fa-2x"> </i>
-                    </a>
-                </div>
-                
-                <footer> &copy; copyright 2020</footer>
-            </section>
-        </main>
-        <!--- Main slut -->
+    <!--- min main saction är den som ändras för respective sida, och har en engen scss fil -->
+    <main>
+      <section class="home">
+        <h2>Hej! Mitt namn är</h2>
+        <h1 class="home__name">
+          Antonia <span class="home__name--last"> Pettersson</span>
+        </h1>
+        <h2 id="cursive">Web Developer Student</h2>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/antonia-pettersson-98625b174/">
+            <i class="fab fa-linkedin-in fa-2x"></i>
+          </a>
+          <a href="#!">
+            <i class="fab fa-instagram fa-2x"> </i>
+          </a>
+          <a href="#!">
+            <i class="fab fa-facebook fa-2x"> </i>
+          </a>
+          <a href="https://github.com/Antonia-91">
+            <i class="fab fa-github fa-2x"> </i>
+          </a>
+        </div>
 
-        <script src="https://kit.fontawesome.com/60a30fd00b.js" crossorigin="anonymous"></script>
-        <script src="js/main.js"></script>
-    
-</body>
+        <footer>&copy; copyright 2020</footer>
+      </section>
+    </main>
+    <!--- Main slut -->
+
+    <script
+      src="https://kit.fontawesome.com/60a30fd00b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
