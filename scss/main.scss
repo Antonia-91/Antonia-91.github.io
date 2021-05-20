@@ -23,65 +23,61 @@
 @import "responsive";
 
 body {
-    background: $primary-color;
-    color: set-text-color($primary-color);
-    height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1;
+  background: $primary-color;
+  color: set-text-color($primary-color);
+  height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1;
 }
 
-h1, h2, h3 {
-    font-weight: 200; 
+h1,
+h2,
+h3 {
+  font-weight: 100;
 }
 
-a{
-    color: set-text-color($primary-color);
-    text-decoration: none;
-} 
- 
+a {
+  color: set-text-color($primary-color);
+  text-decoration: none;
+}
+
 .text-secondary {
-    color: $secondary-color;
+  color: $secondary-color;
 }
 
-
-header{
-    position: fixed;
-    z-index: 2;
-    width: 100%;
-    padding: 1rem;
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
 }
 
-main{
-    height: 100%;
-    width: 100%;
+main {
+  height: 100%;
+  width: 100%;
 
-    .social-icons { 
+  .social-icons {
     position: fixed;
     bottom: 1rem;
-    left: 1rem; 
+    left: 1rem;
 
-        a {
-            padding: 0.4rem;
-            @include trasition-ease;
+    a {
+      padding: 0.4rem;
+      @include trasition-ease;
 
-            &:hover {
-                color: $secondary-color;
-            }
-        }
+      &:hover {
+        color: $secondary-color;
+      }
     }
+  }
 }
 
-footer{
-    font-size: 1rem;
-    position: fixed;
-    bottom: .4rem;
-    right: 1rem;
-    text-align: right;
-    padding: 1rem;
-    color: set-text-color($primary-color);
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  padding: 1rem;
+  color: set-text-color($primary-color);
 }
-
-
-
-
-
